@@ -1,0 +1,309 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center; /* Center-align text for the whole page */
+}
+
+/* Navbar */
+header {
+    background: #1f1f1f;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center-align navbar items */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #1abc9c;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between text and image */
+}
+
+.hero-text {
+    max-width: 600px; /* Adjust the maximum width of the text block */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+.hero-content img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+/* About Me Section */
+#about {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align image and text */
+    gap: 20px; /* Space between image and text */
+}
+
+.about-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+.about-text {
+    max-width: 600px; /* Limit width of text block */
+}
+
+.about-text p {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align sections */
+}
+
+/* Resume Section */
+/* Resume Section */
+.resume-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1s forwards; /* Animation to fade in and slide up */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-box {
+    background-color: #1f1f1f;
+    padding: 30px;
+    width: 400px; /* Set a fixed width */
+    border: 1px solid #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the box */
+    transition: transform 0.3s ease-in-out;
+}
+
+.resume-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.resume-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    animation: slideIn 1s forwards; /* Animation to slide in */
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #16a085; /* Slightly darker shade on hover */
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align project boxes */
+    gap: 20px; /* Space between the boxes */
+}
+
+.project-box {
+    background-color: #1f1f1f;
+    padding: 15px;
+    width: 250px; /* Reduced width */
+    height: auto; /* Adjusts to content */
+    border: 1px solid #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-box img {
+    width: 100%;
+    height: 150px; /* Adjust image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+    justify-content: center; /* Center the boxes */
+    gap: 20px; /* Space between the boxes */
+}
+
+.service-box {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 250px; /* Fixed width of each service box */
+    border: 1px solid #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content horizontally */
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    font-size: 40px; /* Size of the icon */
+    color: #1abc9c; /* Color of the icon */
+    margin-bottom: 10px; /* Space between icon and heading */
+}
+
+.service-text {
+    text-align: center; /* Center text alignment for better look */
+}
+
+.service-text h3 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px; /* Space for the line */
+}
+
+.service-text p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Horizontal Line Under Heading */
+.service-text h3::after {
+    content: '';
+    display: block;
+    width: 50px; /* Width of the horizontal line */
+    height: 2px; /* Thickness of the horizontal line */
+    background-color: #1abc9c; /* Color of the horizontal line */
+    margin: 10px auto 0; /* Center the line and add top margin */
+}
+
+/* Social Links with Logos */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 15px; /* Space between social links */
+    font-size: 20px;
+    text-decoration: none;
+    color: #e0e0e0;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a img.social-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    color: #1abc9c;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px 0;
+}
